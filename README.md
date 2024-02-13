@@ -12,4 +12,4 @@ To run:
 bun run index.ts
 ```
 
-Then navigate to `http://localhost:3000`
+Then navigate to `http://localhost:3000`.
