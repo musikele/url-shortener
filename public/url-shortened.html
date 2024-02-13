@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Url shortened!</h1>
+
+    <p>This is the url we shortened for you:</p>
+    <div id="shortened-url"></div>
+    <script>
+      const host = window.location.host;
+      const protocol = window.location.protocol;
+      //get shortened url from query parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const shortened = urlParams.get('shortened');
+      console.log(shortened);
+      const shortenedUrlDiv = document.getElementById('shortened-url');
+      shortenedUrlDiv.innerHTML = `<a href="${protocol}//${host}/s/${shortened}">${protocol}//${host}/s/${shortened}</a>`;
+    </script>
+  </body>
+</html>
